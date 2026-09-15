@@ -1,9 +1,9 @@
 .crt-chromatic {
   position: relative;
-  color: #00ff41;
+  color: var(--chromatic-color);
   text-shadow:
     -1px 0 rgba(255, 0, 0, 0.5),
     1px 0 rgba(0, 255, 255, 0.5),
-    0 0 8px #00ff41,
-    0 0 16px #00ff41;
+    0 0 8px var(--chromatic-color),
+    0 0 16px var(--chromatic-color);
 }

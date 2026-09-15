@@ -19,6 +19,40 @@
 
   --pick-color: #19be26;
   --hard-pick-text-color: #0e1317;
+
+  --decor-block-color: #00ff41;
+  --pointer-color: #00ff41;
+
+  --chromatic-color: #00ff41;
+}
+
+.light-theme {
+  /* --background-color: #f2ead8; 
+  --main-font-color: #5a3a00;
+  --crt-glow: #a86b00;
+  --crt-glow-shadow: rgba(168, 107, 0, 0.35);
+  --pick-color: #c48a1a;
+  --hard-pick-text-color: #fff8e0;
+  --decor-block-color: #a86b00;
+  --pointer-color: #a86b00;
+  --chromatic-color: #a86b00; IBM */
+  --background-color: #ececec;
+  --main-font-color: #1a1a1a;
+
+  --dot-matrix-graf: rgba(0, 0, 0, 0.1);
+  --skyline-color: rgba(0, 0, 0, 0.25);
+  --skyline-color2: rgba(0, 0, 0, 0);
+
+  --crt-glow: #2a2a2a;
+  --crt-glow-shadow: rgba(0, 0, 0, 0.35);
+
+  --pick-color: #8a8a8a;
+  --hard-pick-text-color: #f5f5f5;
+
+  --decor-block-color: #1a1a1a;
+  --pointer-color: #1a1a1a;
+
+  --chromatic-color: #1a1a1a;
 }
 
 /* 1. БАЗОВЫЙ ФОН — тёмный с лёгким зелёным оттенком */

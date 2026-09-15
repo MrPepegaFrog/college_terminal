@@ -56,3 +56,6 @@
         <div class="dawnEndPick">KERNEL UPD...</div>
       </div>
     </div>
+
+
+    <script src="../script/theme.js"></script>
