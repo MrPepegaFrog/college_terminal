@@ -1,0 +1,10 @@
+.crt-glow {
+  color: var(--crt-glow);
+  text-shadow:
+    0 0 2px var(--crt-glow),
+    0 0 4px var(--crt-glow),
+    0 0 8px var(--crt-glow),
+    0 0 16px var(--crt-glow),
+    0 0 32px var(--crt-glow-shadow);
+  filter: blur(0.3px); /* лёгкое общее размытие */
+}

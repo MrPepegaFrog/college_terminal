@@ -1,0 +1,76 @@
+@import url('./effects/crt-vignette.css');
+@import url('./effects/crt-noise.css');
+@import url('./effects/crt-glow.css');
+@import url('./effects/crt-flicker.css');
+@import url('./effects/crt-screen.css');
+@import url('./effects/crt-chromatic.css');
+
+:root {
+  --background-color: #050a05;
+  --main-font-color: #00ff41;
+
+  --dot-matrix-graf: rgba(0, 255, 65, 0.15);
+  --skyline-color: rgba(0, 0, 0, 0.3);
+  --skyline-color2: rgba(0, 0, 0, 0);
+
+  --crt-glow: #00ff41;
+  --crt-glow-shadow: rgba(0, 255, 65, 0.5);
+}
+
+/* 1. БАЗОВЫЙ ФОН — тёмный с лёгким зелёным оттенком */
+body {
+  background-color: var(--background-color);
+  color: var(--main-font-color);
+  font-family: 'Courier New', monospace;
+  overflow: hidden;
+  position: relative;
+}
+
+/* 2. DOT-MATRIX ФОН  */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle, var(--dot-matrix-graf) 1px, transparent 1px);
+  background-size: 3px 3px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* 3. СКАНЛАЙНЫ  */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    var(--skyline-color2) 0px,
+    var(--skyline-color2) 1px,
+    var(--skyline-color) 2px,
+    var(--skyline-color) 3px
+  );
+  pointer-events: none;
+  z-index: 10;
+  animation: scanline-move 8s linear infinite;
+}
+
+@keyframes scanline-move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 100%;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
